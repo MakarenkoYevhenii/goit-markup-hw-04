@@ -16,6 +16,8 @@
   --bckglisteage: rgb(245, 244, 250);
   --bordedclients:rgba(175, 177, 184, 1);
   --bordercclientshover:rgba(33, 150, 243, 1);
+  --colorsocialbg:rgba(255, 255, 255,0.10);
+
   /* grid setup */
   --item: 1;
   --indent: 30px;
@@ -512,7 +514,6 @@ li,
 .customers-item:hover
 {
   border-color: var(--bordercclientshover);
-
 }
 .customers-item:hover .customers-svg 
 {
@@ -526,4 +527,43 @@ li,
 .contacts-item
 {
   display: flex;
+}
+.connect
+{
+  display: flex;
+}
+.connect-street
+{
+  margin-right: 70px;
+}
+.connect-links
+{
+  display: flex;
+}
+.connect-links-items
+{
+  fill:var(--colorsocialicons);
+  --colorlogo: var(--colorlogoitem);
+
+}
+.links-items:hover
+{
+  border-color: var(--bordercclientshover);
+  background-color: var(--bordercclientshover);}
+.links-items{
+background-color: var(--colorsocialbg);
+
+border-radius: 50%;}
+.connect-heading
+{
+ 
+  color: var(--whitetext);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
