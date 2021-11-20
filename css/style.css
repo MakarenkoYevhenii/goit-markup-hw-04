@@ -25,8 +25,8 @@
 /* сетка для колекции элементов */
 .grid {
   display: flex;
-  margin-right: calc(-1 * var(--indent));
-  margin-bottom: calc(-1 * var(--indent));
+  margin-right: calc(1 * var(--indent));
+  margin-bottom: calc(1 * var(--indent));
   flex-wrap: wrap;
 }
 .grid-item {
@@ -296,7 +296,7 @@ li,
   margin-right: 0;
 }
 
-.list-item {
+.link,.link1 {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -408,17 +408,14 @@ li,
 .listprojects {
   --item: 3;
 }
-.listprojects > li:nth-child(3n + 3) {
-  margin-right: 0;
-  width: 370px;
-}
+
 .imgproject {
   width: 100%;
   height: auto;
 }
 .projects {
   display: flex;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 .paragraph {
   display: flex;
