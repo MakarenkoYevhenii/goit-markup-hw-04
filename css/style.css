@@ -549,7 +549,11 @@ li,
 {
   fill:var(--colorsocialicons);
   --colorlogo: var(--colorlogoitem);
-
+  margin-right: 10px;
+}
+.connect-links-items:last-child
+{
+  margin-right: 0;
 }
 .links-items:hover
 {
@@ -558,7 +562,9 @@ li,
 .links-items{
 background-color: var(--colorsocialbg);
 
-border-radius: 50%;}
+border-radius: 50%;
+
+}
 .connect-heading
 {
  
@@ -571,4 +577,8 @@ border-radius: 50%;}
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+.div-links
+{
+padding: 15px 0;
 }
