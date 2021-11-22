@@ -65,7 +65,7 @@ img {
 .link:focus {
   color: var(--bluecolor);
 }
-.link-current {
+.link1 {
   color: var(--bluecolor);
   text-decoration: none;
 }
@@ -314,7 +314,7 @@ li,
 }
 
 .link,
-.link-current {
+.link1 {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
