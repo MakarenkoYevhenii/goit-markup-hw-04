@@ -65,8 +65,7 @@ img {
 .link:focus {
   color: var(--bluecolor);
 }
-.link1,
-.link1:focus {
+.link-current {
   color: var(--bluecolor);
   text-decoration: none;
 }
@@ -135,6 +134,7 @@ li,
   height: 38px;
   align-items: center;
   padding: 6px 22px;
+  transition: background-color var(--animation),color var(--animation);;
 }
 .menu-button:hover,
 .menu-button:focus {
@@ -234,6 +234,7 @@ li,
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
+  transition: color var(--animation);
 }
 .emblema-basment {
   font-weight: bold;
@@ -312,11 +313,13 @@ li,
   margin-right: 0;
 }
 
-.link,.link1 {
+.link,
+.link-current {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-right: 50px;
+  transition: color var(--animation);
 }
 .list-contacts {
   display: flex;
@@ -330,6 +333,13 @@ li,
 {display: flex;
 }
 /*basement*/
+.svg-basement {
+  display: block;
+  height: 20px;
+  width: 20px;
+  fill:var(--colorlogoitem);
+  transition: fill var(--animation);
+}
 .letter {
   margin-top: 20px;
 }
@@ -455,6 +465,7 @@ li,
 .projects-url
 {
   display: block;
+  transition: box-shadow var(--animation);
 }
 .projects-url:hover
 {
@@ -489,6 +500,14 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
   display: block;
   height: 20px;
   width: 20px;
+  fill:var(--coloriconmain);
+  transition: fill var(--animation);
+  transition: background-color var(--animation);
+}
+.links-items:hover .svg,
+.links-items:focus .svg
+{
+  fill:var(--whitecolor); 
 }
 .social-links {
   display: flex;
@@ -496,11 +515,13 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
 }
 .social-links-items {
   display: block;
-  
 }
 .social-links-items:not(lastc-child)
 {
   margin-right: 10px;
+}
+.social-links-items:hover {
+  border-radius: 50%;
 }
 .links-items {
   display: flex;
@@ -508,7 +529,15 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
   height: 44px;
   align-items: center;
   justify-content: center;
-  
+  transition: background-color var(--animation);
+}
+.links-items:hover
+{
+  border-color: var(--bordercclientshover);
+  background-color: var(--bordercclientshover);}
+  .links-items{
+  background-color: var(--colorsocialbg);
+  border-radius: 50%;
 }
 
 .listeadge-img {
@@ -519,19 +548,13 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
   margin-bottom: 30px;
   height: 120px;
 }
-.social-links-items:hover {
-  background-color: var(--socialitemhover);
-  border-radius: 50%;
-}
+
 .svg-listeage {
   display: block;
   height: 70px;
   width: 70px;
 }
 
-.links-items:hover .svg {
-  --colorlogo: var(--colorlogoitem);
-}
 .cutomers-heading
 {
   text-align: center;
@@ -550,11 +573,13 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
   height: 92px;
   border: 1px solid var(--bordedclients);
   border-radius: 4px;
+  transition: border-color var(--animation);
 }
 .customers-svg
 {
   display: block;
   fill:var(--coloriconmain);
+  transition: fill var(--animation);
 }
 .customers-item:not(:last-child)
 {
@@ -600,16 +625,7 @@ align-items: baseline;
 {
   margin-right: 0;
 }
-.links-items:hover
-{
-  border-color: var(--bordercclientshover);
-  background-color: var(--bordercclientshover);}
-.links-items{
-background-color: var(--colorsocialbg);
 
-border-radius: 50%;
-
-}
 .connect-heading
 {
 
@@ -623,5 +639,4 @@ border-radius: 50%;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 
