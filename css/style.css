@@ -19,6 +19,7 @@
   --colorsocialbg:rgba(255, 255, 255,0.1 );
   --colorbggradient:rgba(47, 48, 58, 0.4);
   --colorparagraphhero:rgba(117, 117, 117, 1);
+  --coloriconmain:#AFB1B8;
   /* shadowvolor */
   --shadow1:rgba(0, 0, 0, 0.1);
   --shadow2:rgba(0, 0, 0, 0.08);
@@ -31,6 +32,8 @@
   --item: 2;
   --item2: 2;
   --indent: 30px;
+  /*animation setting*/
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -177,7 +180,20 @@ li,
   text-decoration: none;
   display: flex;
   align-items: center;
+  /* animation */
+  transition: color var(--animation);
 }
+.contacts:hover,
+.contacts:focus
+{
+  color: var(--bluecolor);
+}
+.svg-contact
+{
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .basment {
   background-color: var(--rockcolor);
   padding-top: 60px;
@@ -435,6 +451,7 @@ li,
 {
   margin-bottom: 0;
 }
+
 .projects-url
 {
   display: block;
@@ -537,6 +554,7 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
 .customers-svg
 {
   display: block;
+  fill:var(--coloriconmain);
 }
 .customers-item:not(:last-child)
 {
@@ -556,7 +574,8 @@ box-shadow: 0px 1px 1px var(--shadow3), 0px 4px 4px var(--shadow6), 1px 4px 6px 
 }
 .customers-item:hover .customers-svg 
 {
-  --companycolor:var(--bordercclientshover);
+  
+  fill:var(--bordercclientshover);
 }
 .connect
 {
@@ -593,7 +612,7 @@ border-radius: 50%;
 }
 .connect-heading
 {
- 
+
   color: var(--whitetext);
   font-family: "Roboto";
   font-style: normal;
@@ -604,16 +623,5 @@ border-radius: 50%;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.contacts:hover,
-.contacts:focus
-{
-  color: var(--bluecolor);
-}
-.contacts:hover .svg-contact
-{
-  --colorcontact:var(--bluecolor);
-}
-.svg-contact
-{
-  margin-right: 10px;
-}
+
+
