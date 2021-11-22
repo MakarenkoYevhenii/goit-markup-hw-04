@@ -16,7 +16,7 @@
   --bckglisteage: rgb(245, 244, 250);
   --bordedclients:rgba(175, 177, 184, 1);
   --bordercclientshover:rgba(33, 150, 243, 1);
-  --colorsocialbg:rgba(255, 255, 255,0.10);
+  --colorsocialbg:rgba(255, 255, 255,0.1 );
   --colorbggradient:rgba(47, 48, 58, 0.4);
   /* shadowvolor */
   --shadow1:rgba(0, 0, 0, 0.1);
@@ -204,10 +204,7 @@ li,
 .adress {
   color: var(--whitecolor);
 }
-.contacts:hover,
-.contacts:focus {
-  color: var(--bluecolor);
-}
+
 .contacts-basment:hover,
 .contacts-basment:focus {
   color: var(--bluecolor);
@@ -341,7 +338,7 @@ li,
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient( to right,var(--colorbggradient),var(--colorbggradient)),url(/images/background/bkghero.jpg);
+  background-image:linear-gradient(var( --colorbggradient), var( --colorbggradient)),url(../images/background/bkghero.jpg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -600,4 +597,11 @@ border-radius: 50%;
 .div-links
 {
 padding: 15px 0;
+}
+
+.contacts:hover,
+.contacts:focus
+{
+  --colorcontact:var(--bluecolor);
+  color: var(--bluecolor);
 }
